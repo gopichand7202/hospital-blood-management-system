@@ -1,0 +1,96 @@
+
+<html>
+<head>
+<style>
+   table{
+         background-color  :rgba(215,234,240,0.75);
+         color : #ffffff;
+		top : 300px;
+      margin-left:auto;
+      margin-right:auto;
+	}
+ 
+   
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.bg-image {
+  /* The image used */ background: url("https://img.freepik.com/free-vector/illustration-people-donating-blood_52683-22259.jpg?size=626&ext=jpg&ga=GA1.2.119791230.1655198515");
+  
+  
+  /* Add the blur effect */
+  filter: blur(0px);
+  -webkit-filter: blur(4px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+
+
+<body>
+<div class="bg-image"></div>
+<div class="bg-text">
+<form align = "center" action="adddonor.php" method="post">
+<table align = "center" color = "#ffffff" cellpadding="10px">
+	<tr><td align = "center" style="color:black"><b>Name</b></td><td align = "center"><input type = "text" name = "name" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>Rollno.</b></td><td align = "center"><input type = "text" name = "id" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>PhoneNo.</b></td><td align = "center"><input type = "number" name = "phn" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>Address</b></td><td align = "center"><input type = "textarea" name = "address" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>College Name</b></td><td>
+                  <select name="clgname" required>
+                  
+                 <option>santiram pharmacy college</option>
+                   <option>R G M engineering college</option>
+                  <option>santiram engineering college</option>
+                  <option>s v r engineering college</option>
+                  <option>santiram medical college</option>
+                   
+                 </select></td></tr>
+	<tr><td align = "center" style="color:black"><b>Last Donated</b></td><td><input type = "date" name = "ld" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>year of joining</b></td><td><input type = "number" name = "yoj" required></td></tr>
+	<tr><td align = "center" style="color:black"><b>Blood Group</b></td><td align = "center">
+	<select name="bgrp" required>
+	<option>A+</option>
+	<option>A-</option>
+	<option>B+</option>
+	<option>B-</option>
+	<option>O+</option>
+	<option>O-</option>
+	<option>AB+</option>
+	<option>AB-</option>
+      <option>bombay</option>
+	</select></td></tr>
+	<tr><td align = "center" style="color:black"><input type = "submit" value = "submit"></td><td align = "center"><input type = "reset" value = "reset"></td></tr>
+	</table>
+</form>
+</html>
+</body>
